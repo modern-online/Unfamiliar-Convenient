@@ -55,6 +55,7 @@ print("Setting up connection to Mycroft client")
 client = MessageBusClient()
 
 # load machine learning model for keyword extraction
+# (first download the model! : python3 -m spacy download en_core_web_sm)
 print("Importing machine learning model")
 keyworder = spacy.load("en_core_web_sm")
 
