@@ -16,12 +16,12 @@
 """
 Contextual plug-in script for Mycroft voice assistant. 
 When a human utterance is detected and resolved by Mycroft,
-this plug-in script forces additional 'contextualisation' 
+this 'plug-in' forces additional 'contextualisation' 
 in a domain of choice. 
 
 For example, if you ask Mycroft to look up 'Planet Jupiter',
-after providing the original answer it will further define 
-a context (climate change by default). 
+after providing the original answer it will provide additional
+information within a context (climate change by default).
 
 This is done by:
 1) Capturing human utterance via Mycroft before adequate skills
