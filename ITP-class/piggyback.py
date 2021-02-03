@@ -37,7 +37,6 @@ get triggered,
 6) Parsing the page, extracting summary with the help of NLP
 7) Sending (emitting) text to Mycroft after the original inquiry
 has been answered
-
 """
 
 from mycroft_bus_client import MessageBusClient, Message
