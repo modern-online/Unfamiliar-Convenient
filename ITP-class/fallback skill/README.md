@@ -9,5 +9,6 @@ Berlin, led by Vytautas Jankauskas and Claire Glanois in early 2020.
 The script needs Mycroft voice assistant installed
 More on Mycroft: https://github.com/MycroftAI
 
-Vytas has further adapted it for the 2021 NYU ITP Master's programme. 
+Originally written by Claire Glanois,
+Vytas hsimplified it for the 2021 NYU ITP Master's programme. 
 Feel free to tune and shape it according to your project.
