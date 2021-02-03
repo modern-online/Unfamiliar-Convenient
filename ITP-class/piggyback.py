@@ -13,8 +13,9 @@
 # This script was developed as one of educational templates into using Mycroft
 # as part of 2021 NYU ITP spring semester class.
 
-# Some different version of this script is also implemented by Claire on another project
-# she's working on. So apparently this is a meme. 
+# Apparently some other version of this script is used by Claire in a project
+# she's working on with some peeps. Hence this template should be taken as
+# a departure point and not a final result.
 
 """
 Contextual plug-in script for Mycroft voice assistant. 
