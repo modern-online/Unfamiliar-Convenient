@@ -11,8 +11,3 @@ More on Mycroft: https://github.com/MycroftAI
 
 Vytas has further adapted it for the 2021 NYU ITP Master's programme. 
 Feel free to tune and shape it according to your project.
-
-# Project page: 
-# https://vjnks.com/works/unfamiliar-convenient-project-in-progress-46
-# Repo: 
-# https://github.com/modern-online/Unfamiliar-Convenient/tree/main/ITP-class
