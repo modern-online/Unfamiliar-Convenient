@@ -13,6 +13,9 @@
 # This script was developed as one of educational templates into using Mycroft
 # as part of 2021 NYU ITP spring semester class.
 
+# Some different version of this script is also implemented by Claire on another project
+# she's working on. So apparently this is a meme. 
+
 """
 Contextual plug-in script for Mycroft voice assistant. 
 When a human utterance is detected and resolved by Mycroft,
@@ -21,7 +24,7 @@ in a domain of choice.
 
 For example, if you ask Mycroft to look up 'Planet Jupiter',
 after providing the original answer it will provide additional
-information within a context (climate change by default).
+information within a context (popcorn by default).
 
 This is done by:
 1) Capturing human utterance via Mycroft before adequate skills
@@ -48,7 +51,7 @@ from time import sleep
 from urllib.error import URLError
 
 # SEARCH CONTEXT / CHOOSE ANYTHING
-search_context = "climate change"
+search_context = "popcorn"
 
 # import Message Bus client to communicate with Mycroft's guts
 print("Setting up connection to Mycroft client")
