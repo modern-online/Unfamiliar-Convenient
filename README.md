@@ -1,7 +1,5 @@
 # Unfamiliar-Convenient
-A research-creation project challenging the stagnating notion of smart home by rewiring the guts of various smart home devices
-
-For more information about the project please refer to: https://vjnks.com/works/unfamiliar-convenient-project-in-progress-46
+A research-creation project challenging the stagnating notion of smart home by rewiring the guts of various smart home devices. For more information about the project please refer to: https://vjnks.com/works/unfamiliar-convenient-project-in-progress-46
 
 # Case study 1 
 
