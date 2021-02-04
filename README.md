@@ -1,6 +1,6 @@
 # Unfamiliar-Convenient
 
-[uvc](https://github.com/modern-online/Unfamiliar-Convenient/blob/main/images/chris3.png)
+![uvc](https://github.com/modern-online/Unfamiliar-Convenient/blob/main/images/chris3.png)
 
 A research-creation project in collaboration with Claire Glanois, challenging the stagnating notion of smart home by rewiring the guts of various smart home devices. 
 
