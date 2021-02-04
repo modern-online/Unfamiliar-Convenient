@@ -1,6 +1,6 @@
-# Mycroft (open-source voice assistant) skills/scripts as course templates
+# Mycroft skills/scripts as course templates
 
-Please refer to [Mycroft](https://mycroft.ai/) website for more information.  
+Please refer to [Mycroft](https://mycroft.ai/) open-source voice-assistant platform's website for more information.  
 
 
 ### Narrator Skill
