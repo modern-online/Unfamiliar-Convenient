@@ -1,7 +1,8 @@
 # Unfamiliar-Convenient
 
-A research-creation project in collaboration with Claire Glanois, challenging the stagnating notion of smart home by rewiring the guts of various smart home devices. More information about the project [here](https://vjnks.com/works/unfamiliar-convenient-project-in-progress-46)
+A research-creation project in collaboration with Claire Glanois, challenging the stagnating notion of smart home by rewiring the guts of various smart home devices. 
 
+More information about the project [here](https://vjnks.com/works/unfamiliar-convenient-project-in-progress-46).
 For the most up-to-date repository of the project itself, go [here](https://github.com/claireaoi/unfamiliarconvenient).
 
 # Case Study 1 
