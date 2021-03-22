@@ -1,0 +1,7 @@
+google
+newspaper3k
+nltk
+spacy
+torch
+transformers
+wikipedia
