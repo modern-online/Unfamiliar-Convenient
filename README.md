@@ -13,4 +13,4 @@ Case Study 1 is an interactive voice assistant running on [Mycroft](https://gith
 
 # Roo (Case Study 2) 
 
-Roo is a modified Roomba that sends its trajectories to Case Study 1, it also communicates with sattelites via GPS in order to influence and subvert the semantic word graphs of Case Study 1. Work-in-progress. 
+Roo is a modified Roomba 650 that sends its trajectories to Case Study 1, it also communicates with sattelites via GPS in order to influence and subvert the semantic word graphs of Case Study 1. Work-in-progress. The Python script is intended for reception and further treatment of the data, whereas Arduino code operates an Arduino Mega attached to Roomba's serial ports. 
