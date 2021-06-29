@@ -28,7 +28,7 @@ void processMovementSensors() {
 
 // Check if battery is sufficiently charged
 bool batteryLow() {
-  int batteryPercent = map(batteryCharge, 0, batteryCapacity, 0, 100);
+  batteryPercent = map(batteryCharge, 0, batteryCapacity, 0, 100);
   if (batteryPercent < 10) {
     return true;
     }
@@ -44,5 +44,42 @@ bool batteryCharging() {
   }
   else {
     return false;
+  }
+}
+
+// GPS Data
+void getClearestSNR(int &satNum, int &satSNR) { // pass addresses
+  for (int i=0; i<4; ++i) {
+    int no = atoi(satNumber[i].value());
+    if (no >= 1 && no <= MAX_SATELLITES) {
+          sats[no-1].snr = atoi(snr[i].value());
+          sats[no-1].active = true;
+    }
+  }
+      
+  int totalMessages = atoi(totalGPGSVMessages.value());
+  int currentMessage = atoi(messageNumber.value());
+  //int inView = atoi(satsInView.value());
+
+  // initalize as empty
+  satNum=0;
+  satSNR=0;
+  int maximum = 0;
+  
+  if (totalMessages == currentMessage) {
+    //Serial.print(F("Sats in View=")); Serial.println(atoi(satsInView.value())); // for debugging
+    for (int i=0; i<MAX_SATELLITES; ++i) {
+        if (sats[i].active) {
+           if (sats[i].snr >= 30 && maximum < sats[i].snr) { // get clearest snr
+             satNum=i+1;
+             satSNR=sats[i].snr;
+             maximum=satSNR;
+           }
+        }
+    }
+
+    for (int i=0; i<MAX_SATELLITES; ++i) {
+       sats[i].active = false;
+    }
   }
 }

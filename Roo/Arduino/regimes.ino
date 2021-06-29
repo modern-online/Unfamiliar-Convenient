@@ -1,8 +1,10 @@
+// Check/Change Roomba's state: Cleaning, Docking, or Charging
 void checkRegime() {
   if (currentMillis - prevRegimeMillis >= regimeCheckInterval) {
-    bool batteryState = batteryLow();
+    bool batteryLowCharge = batteryLow();
     
-    if (!cleaning && !batteryState && !charging) {
+    if (!cleaning && !batteryLowCharge && !charging) { 
+      Serial.print(F("******* CLEANING!! *******"));
       
       // start cleaning
       roo.clean();
@@ -12,17 +14,18 @@ void checkRegime() {
       charging = false;
     }
 
-    else if (!docking && cleaning && batteryState) {
+    else if (!docking && cleaning && batteryLowCharge) {
       roo.seekDock();
 
       cleaning = false;
       docking = true;
       charging = false;
+      gpsCaptured = false; // reset gps capture, not cleaning
     }
  
     else {
       // change to true after debugging
-      if (!batteryCharging()) {
+      if (batteryCharging()) {
         //myX = 0;
         //myY = 0;
         
@@ -31,8 +34,9 @@ void checkRegime() {
         charging = true;
   
         // Wait for CS1's green light
-        if (!batteryState) {
-          callPython();
+        if (!batteryLowCharge && gpsCaptured) {
+          // NOT SURE IF THIS IS OK
+          charging = false;
         }
       }      
     }
@@ -42,20 +46,20 @@ void checkRegime() {
   }
 }
 
-void callPython() {
-  //Serial3.println("ready"); // tell Python to call
-  //Serial3.flush();
-
-  // This needs work !!
-  if (Serial3.available() > 0) {
-    int message = 0;
-    String s = Serial3.readString();
-    // Serial.println("Message from Python: " + s);
-    message = s.toInt();
-    if (message == 1) {
-      charging = false;
-      Serial3.println("busy"); // tell Python to call
-      Serial3.flush();
+void remoteControl() {   
+  if (currentMillis - prevRemoteMillis >= remoteControlInterval) {      
+    if (Serial3.available() > 0) {
+      String s = Serial3.readString();
+      //Serial.println("Message from Python: " + s);
+      if (s == "stop") {
+        roo.stop();
+      }
+      else if (s == "start") {
+        roo.clean();    
+      }
     }
+    
+    // Update timer
+    prevRemoteMillis += remoteControlInterval;
   }
 }

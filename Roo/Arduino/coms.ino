@@ -1,3 +1,4 @@
+// Send Roomba's Coordinates to Python
 void toPython() {
   if (currentMillis - prevSendMillis >= sendInterval) {
     String buf;
@@ -8,13 +9,10 @@ void toPython() {
     // Send buffer of Roomba's coordinates to Python
     Serial3.println(buf);
     Serial3.flush();
-
-    // Send GPS data to Python
-
-    if (gps.location.isValid())
-      Serial3.println((gps.location.lat(), 6) + ";" + (gps.location.lng(), 6));
-    
-    
+    // Send remaining battery to Python
+    Serial3.println(batteryPercent);
+    Serial3.flush();
+          
     // Update send timer
     prevSendMillis += sendInterval;
   }
